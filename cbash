@@ -1,4 +1,4 @@
-# Common across any system using zsh
+# Common across any system using bash
 # For cli edits
 export EDITOR=emacs
 export VISUAL=emacs
@@ -130,10 +130,9 @@ alias sshbn='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 gonzaeve@sub
 alias sshcn='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 gonzaeve@submit-c.hpc.engr.oregonstate.edu'
 alias sshnn='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 gonzaeve@submit.hpc.engr.oregonstate.edu'
 
-# Source zshrc and zprofile
-alias sp='source ~/.zshrc; source ~/.zprofile'
+# Source bashrc 
+alias sp='source ~/.bashrc'
 
-# Edit zprofile
-alias ep='emacs ~/.zprofile'
-alias epc='emacs ~/common/czsh'
-alias cpm='emacs ~/common/maczsh'
+# Edit bash
+alias ep='emacs ~/.bashrc'
+alias epc='emacs ~/common/cbash'

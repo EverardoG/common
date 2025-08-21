@@ -1,0 +1,70 @@
+# Specifically for silicon-starforge
+# For homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Alias for using graphical emacs
+alias Emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+
+# Aliases for docker
+alias di='docker images'
+alias dc='docker ps -a'
+
+# Shell function for running docker containers
+dr() {
+  docker run -it --rm "$1" /bin/bash
+}
+
+# Additional shortcuts
+alias    av='alogview'
+
+# Shortcuts to open repos
+alias ce='start-lima-dev.sh'
+alias che='start-vscode-tunnel.sh'
+
+# ssh, rsync for pablo boxes
+export C20IP="192.168.2.2"
+
+# Pull from the remote host into your local dir
+function rpullc20 {
+  local flags=( -av )
+
+  # Collect extra flags
+  while [[ $# -gt 0 && $1 == -* ]]; do
+    flags+=("$1")
+    shift
+  done
+
+  if (( $# != 2 )); then
+    echo "Usage: rpullc20 [rsync-opts] remote_dir local_dir"
+    return 1
+  fi
+
+  local remote_dir=$1; shift
+  local local_dir=$1;  shift
+
+  rsync "${flags[@]}" "student2680@${C20IP}:${remote_dir}" "${local_dir}"
+}
+
+# Push from your local dir up to the remote host
+function rpushc20 {
+  local flags=( -av )
+
+  # Collect extra flags
+  while [[ $# -gt 0 && $1 == -* ]]; do
+    flags+=("$1")
+    shift
+  done
+
+  if (( $# != 2 )); then
+    echo "Usage: rpushc20 [rsync-opts] local_dir remote_dir"
+    return 1
+  fi
+
+  local local_dir=$1;   shift
+  local remote_dir=$1;  shift
+
+  rsync "${flags[@]}" "${local_dir}" "student2680@${C20IP}:${remote_dir}"
+}
+
+
+alias sshc20='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C20IP}'
