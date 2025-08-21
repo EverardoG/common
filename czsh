@@ -10,6 +10,9 @@ export PATH="$PATH:$HOME/.local/bin"
 alias  rm='rm -i'
 alias  mv='mv -i'
 
+# Alias to get ip address
+alias getip='ipconfig getifaddr en0'
+
 # To bypass interactive mode with cp, call \cp instead of cp
 alias  cp='cp -i'
 
@@ -50,7 +53,7 @@ alias   cdh='cd ~/hpc-share'
 alias  cdhe='cd ~/hpc-share/evo-mariners-results'
 
 # Paths for moos
-PATH=$PATH:~/moos-ivp/bin
+PATH=$PATH:~/moos-ivp/bin:~/moos-ivp/scripts
 PATH=$PATH:~/moos-ivp-learn/bin:~/moos-ivp-learn/scripts
 PATH=$PATH:~/moos-ivp-2680/bin:~/moos-ivp-2680/scripts
 # And evo-mariners

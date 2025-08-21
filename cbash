@@ -50,15 +50,15 @@ alias   cdh='cd ~/hpc-share'
 alias  cdhe='cd ~/hpc-share/evo-mariners-results'
 
 # Paths for moos
-PATH=$PATH:~/moos-ivp/bin
+PATH=$PATH:~/moos-ivp/bin:~/moos-ivp/scripts
 PATH=$PATH:~/moos-ivp-learn/bin:~/moos-ivp-learn/scripts
 PATH=$PATH:~/moos-ivp-2680/bin:~/moos-ivp-2680/scripts
 # And evo-mariners
 PATH=$PATH:~/evo-mariners/bin:~/evo-mariners/scripts
 
 # Shortcuts to build repos
-alias  bl='cdml; ./build.sh; cd -'
-alias  be='cde; ./build.sh; cd -'
+alias  bl='cdml; ./build.sh -j; cd -'
+alias  be='cde; ./build.sh -j; cd -'
 
 # For behaviors to be recognized by the helm
 export IVP_BEHAVIOR_DIRS=~/moos-ivp/lib:~/moos-ivp-2680/lib:~/moos-ivp-learn/lib
