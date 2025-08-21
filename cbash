@@ -64,10 +64,16 @@ alias  be='cde; ./build.sh -j; cd -'
 export IVP_BEHAVIOR_DIRS=~/moos-ivp/lib:~/moos-ivp-2680/lib:~/moos-ivp-learn/lib
 
 # moos missions
-alias  runa='cdal; learnKill; ./launch.sh 10' # full alpha_learn mission
-alias runat='cdal; learnKill; ./launch.sh'
-alias runsa='cdal; learnKill; ./launch_shoreside.sh' # only shoreside
-alias runva='cdal; learnKill; ./launch_vehicle.sh'
+alias    runa='cdal; learnKill; ./launch.sh 10' # full alpha_learn mission
+alias   runat='cdal; learnKill; ./launch.sh'
+alias   runsa='cdal; learnKill; ./launch_shoreside.sh' # only shoreside
+alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c1.txt'
+alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c2.txt'
+alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c3.txt'
+alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c4.txt'
+alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c5.txt'
+alias  runva='cdal; learnKill; ./launch_vehicle.sh' # only vehicle
+alias runtva='runva --observation_radius=100 --shore=192.168.1.57' # vehicle with test configuration
 
 # -------------------------------------
 # Aliases for sshing into pavlab herons
