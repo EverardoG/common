@@ -1,4 +1,11 @@
 # Specifically for silicon-starforge
+
+# Source zsh
+# Source common across bash and zsh
+if [ -f "$HOME/common/czsh" ]; then
+    source "$HOME/common/czsh"
+fi
+
 # For homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -23,48 +30,57 @@ alias che='start-vscode-tunnel.sh'
 
 # ssh, rsync for pablo boxes
 export C20IP="192.168.2.2"
-
-# Pull from the remote host into your local dir
-function rpullc20 {
-  local flags=( -av )
-
-  # Collect extra flags
-  while [[ $# -gt 0 && $1 == -* ]]; do
-    flags+=("$1")
-    shift
-  done
-
-  if (( $# != 2 )); then
-    echo "Usage: rpullc20 [rsync-opts] remote_dir local_dir"
-    return 1
-  fi
-
-  local remote_dir=$1; shift
-  local local_dir=$1;  shift
-
-  rsync "${flags[@]}" "student2680@${C20IP}:${remote_dir}" "${local_dir}"
-}
-
-# Push from your local dir up to the remote host
-function rpushc20 {
-  local flags=( -av )
-
-  # Collect extra flags
-  while [[ $# -gt 0 && $1 == -* ]]; do
-    flags+=("$1")
-    shift
-  done
-
-  if (( $# != 2 )); then
-    echo "Usage: rpushc20 [rsync-opts] local_dir remote_dir"
-    return 1
-  fi
-
-  local local_dir=$1;   shift
-  local remote_dir=$1;  shift
-
-  rsync "${flags[@]}" "${local_dir}" "student2680@${C20IP}:${remote_dir}"
-}
-
+export C19IP="192.168.2.3"
+export C24IP="192.168.2.4"
+export C21IP="192.168.2.5"
 
 alias sshc20='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C20IP}'
+alias sshc19='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C19IP}'
+alias sshc24='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C24IP}'
+alias sshc21='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C21IP}'
+
+# === Pablo box workflow is work-in-progress ===
+# # Pull from the remote host into your local dir
+# function rpullc20 {
+#   local flags=( -av )
+
+#   # Collect extra flags
+#   while [[ $# -gt 0 && $1 == -* ]]; do
+#     flags+=("$1")
+#     shift
+#   done
+
+#   if (( $# != 2 )); then
+#     echo "Usage: rpullc20 [rsync-opts] remote_dir local_dir"
+#     return 1
+#   fi
+
+#   local remote_dir=$1; shift
+#   local local_dir=$1;  shift
+
+#   rsync "${flags[@]}" "student2680@${C20IP}:${remote_dir}" "${local_dir}"
+# }
+
+# # Push from your local dir up to the remote host
+# function rpushc20 {
+#   local flags=( -av )
+
+#   # Collect extra flags
+#   while [[ $# -gt 0 && $1 == -* ]]; do
+#     flags+=("$1")
+#     shift
+#   done
+
+#   if (( $# != 2 )); then
+#     echo "Usage: rpushc20 [rsync-opts] local_dir remote_dir"
+#     return 1
+#   fi
+
+#   local local_dir=$1;   shift
+#   local remote_dir=$1;  shift
+
+#   rsync "${flags[@]}" "${local_dir}" "student2680@${C20IP}:${remote_dir}"
+# }
+
+
+# alias sshc20='ssh -o ServerAliveInterval=60 -o ServerAliveCountMax=3 -l student2680 ${C20IP}'
