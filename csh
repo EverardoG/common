@@ -73,20 +73,20 @@ alias  runva='cdal; learnKill; ./launch_vehicle.sh' # only vehicle
 # Aliases for hardware testing
 # -------------------------------------
 # Run Shoreside 5 (swimmers)
-alias rs5='cdal; learnKill; ./init_field.sh --swimmers=5; ./launch_shoreside.sh --swim_file=mit_rand.txt'
+alias rs5='cdal; learnKill; ./init_field.sh --swimmers=5; ./launch_shoreside.sh --swim_file=mit_rand.txt --ip=192.168.1.241'
 
 # Rescue vehicle with baseline FollowCOM
 # Run Vehicle FollowCOM
-alias  rvf='runva --observation_radius=100 --shore=192.168.1.57'
+alias  rvf='runva --observation_radius=100 --shore=192.168.1.241'
 
 # Rescue vehicle with Neural Network Behavior
 # Run Vehicle Neural Network
-alias rvnn='runva --observation_radius=100 --shore=192.168.1.57 --primarybehavior=NeuralNetwork'
+alias rvnn='runva --observation_radius=100 --shore=192.168.1.241 --primarybehavior=NeuralNetwork --neural_network_config=net-bv/2025-08-13.lima.50gens_20rpi.trial_0.gen_30.team_31_inds_0.rollout_0.neural_network_abe1.csv'
 # needs --neural_network_config=<csv_directory>
 
 # Scout vehicle with adversary behavior
 # Run Vehicle Scout (Adversary)
-alias rvs='runva --observation_radius=100 --shore=192.168.1.57 --primarybehavior=Adversary --vrole=scout --tmate=none'
+alias rvs='runva --observation_radius=100 --shore=192.168.1.241 --primarybehavior=Adversary --vrole=scout --tmate=none'
 
 # -------------------------------------
 # Aliases for sshing into pavlab herons
