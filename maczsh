@@ -6,6 +6,9 @@ if [ -f "$HOME/common/czsh" ]; then
     source "$HOME/common/czsh"
 fi
 
+# Get my ip address
+alias getip='ipconfig getifaddr en0'
+
 # For homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

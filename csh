@@ -67,13 +67,26 @@ export IVP_BEHAVIOR_DIRS=~/moos-ivp/lib:~/moos-ivp-2680/lib:~/moos-ivp-learn/lib
 alias    runa='cdal; learnKill; ./launch.sh 10' # full alpha_learn mission
 alias   runat='cdal; learnKill; ./launch.sh'
 alias   runsa='cdal; learnKill; ./launch_shoreside.sh' # only shoreside
-alias runtsa1='runsa --swim_file=test_swim_files/swimmers.5.c1.txt'
-alias runtsa2='runsa --swim_file=test_swim_files/swimmers.5.c2.txt'
-alias runtsa3='runsa --swim_file=test_swim_files/swimmers.5.c3.txt'
-alias runtsa4='runsa --swim_file=test_swim_files/swimmers.5.c4.txt'
-alias runtsa5='runsa --swim_file=test_swim_files/swimmers.5.c5.txt'
 alias  runva='cdal; learnKill; ./launch_vehicle.sh' # only vehicle
-alias runtva='runva --observation_radius=100 --shore=192.168.1.57' # vehicle with test configuration
+
+# -------------------------------------
+# Aliases for hardware testing
+# -------------------------------------
+# Run Shoreside 5 (swimmers)
+alias rs5='cdal; learnKill; ./init_field.sh --swimmers=5; ./launch_shoreside.sh --swim_file=mit_rand.txt'
+
+# Rescue vehicle with baseline FollowCOM
+# Run Vehicle FollowCOM
+alias  rvf='runva --observation_radius=100 --shore=192.168.1.57'
+
+# Rescue vehicle with Neural Network Behavior
+# Run Vehicle Neural Network
+alias rvnn='runva --observation_radius=100 --shore=192.168.1.57 --primarybehavior=NeuralNetwork'
+# needs --neural_network_config=<csv_directory>
+
+# Scout vehicle with adversary behavior
+# Run Vehicle Scout (Adversary)
+alias rvs='runva --observation_radius=100 --shore=192.168.1.57 --primarybehavior=Adversary --vrole=scout --tmate=none'
 
 # -------------------------------------
 # Aliases for sshing into pavlab herons
