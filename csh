@@ -83,6 +83,7 @@ alias  rvf='runva --observation_radius=100 --shore=192.168.1.231'
 
 # Rescue vehicle with Neural Network Behavior
 # Run Vehicle Neural Network
+alias rvn='runva --observation_radius=100 --shore=192.168.1.231 --primarybehavior=NeuralNetwork'
 alias rvnn='runva --observation_radius=100 --shore=192.168.1.231 --primarybehavior=NeuralNetwork --neural_network_config=net-bv/2025-08-13.lima.50gens_20rpi.trial_0.gen_30.team_31_inds_0.rollout_0.neural_network_abe1.csv'
 # needs --neural_network_config=<csv_directory>
 
