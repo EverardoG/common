@@ -75,9 +75,9 @@ alias  runva='cdal; learnKill; ./launch_vehicle.sh' # only vehicle
 # Run Shoreside 5 (swimmers)
 alias  rs5='cdal; learnKill; ./init_field.sh --swimmers=5; ./launch_shoreside.sh --swim_file=mit_rand.txt'
 alias rs10='cdal; learnKill; ./init_field.sh --swimmers=10; ./launch_shoreside.sh --swim_file=mit_rand.txt'
-alias rs20='cdal; learnKill; ./init_field.sh --swimmers=20; ./launch_shoreside.sh --swim_file=mit_rand.txt'
+alias rs20='cdal; learnKill; ./init_field.sh --swimmers=20; ./launch_shoreside.sh --swim_file=mit_rand.txt' # --ip=<ip-addr>
 
-alias rss='cdal; learnKill; ./launch_shoreside.sh --swim_file=mit_rand.txt --ip=192.168.1.231'
+alias rss='cdal; learnKill; ./launch_shoreside.sh --swim_file=mit_rand.txt' # --ip=<ip-addr>
 
 # Rescue vehicle with baseline FollowCOM
 # Run Vehicle FollowCOM
@@ -85,8 +85,11 @@ alias  rvf='runva --observation_radius=100' # --shore=192.168.1.231
 
 # Rescue vehicle with Neural Network Behavior
 # Run Vehicle Neural Network
-alias rvn='runva --observation_radius=100 --primarybehavior=NeuralNetwork' # --shore=<ip-addr> --neural_network_config=<net-csv>
-# alias rvnn='runva --observation_radius=100 --primarybehavior=NeuralNetwork --neural_network_config=net-bv/2025-08-13.lima.50gens_20rpi.trial_0.gen_30.team_31_inds_0.rollout_0.neural_network_abe1.csv'
+alias  rvn='runva --observation_radius=100 --primarybehavior=NeuralNetwork' # --neural_network_config=<net-csv> --shore=<ip-addr>
+alias rvn1='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe1.csv' # --shore=<ip-addr>
+alias rvn2='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe2.csv' # --shore=<ip-addr>
+alias rvn3='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe3.csv' # --shore=<ip-addr>
+alias rvn4='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe4.csv' # --shore=<ip-addr>
 
 # Scout vehicle with adversary behavior
 # Run Vehicle Scout (Adversary)
