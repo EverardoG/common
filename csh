@@ -86,9 +86,9 @@ alias  rvf='runva --observation_radius=100' # --shore=192.168.1.231
 # Rescue vehicle with Neural Network Behavior
 # Run Vehicle Neural Network
 alias  rvn='runva --observation_radius=100 --primarybehavior=NeuralNetwork' # --neural_network_config=<net-csv> --shore=<ip-addr>
-alias rvn1='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe1.csv' # --shore=<ip-addr>
-alias rvn2='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe2.csv' # --shore=<ip-addr>
-alias rvn3='rvn --neural_network_config=~/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe3.csv' # --shore=<ip-addr>
+alias rvn1='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe1.csv' # --shore=<ip-addr>
+alias rvn2='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe2.csv' # --shore=<ip-addr>
+alias rvn3='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe3.csv' # --shore=<ip-addr>
 alias rvn4='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe4.csv' # --shore=<ip-addr>
 
 # Scout vehicle with adversary behavior
