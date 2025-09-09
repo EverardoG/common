@@ -76,6 +76,7 @@ alias  runva='cdal; learnKill; ./launch_vehicle.sh' # only vehicle
 alias  rs5='cdal; learnKill; ./init_field.sh --swimmers=5; ./launch_shoreside.sh --swim_file=mit_rand.txt'
 alias rs10='cdal; learnKill; ./init_field.sh --swimmers=10; ./launch_shoreside.sh --swim_file=mit_rand.txt'
 alias rs20='cdal; learnKill; ./init_field.sh --swimmers=20; ./launch_shoreside.sh --swim_file=mit_rand.txt' # --ip=<ip-addr>
+alias rs40='cdal; learnKill; ./init_field.sh --swimmers=40; ./launch_shoreside.sh --swim_file=mit_rand.txt'
 
 alias rss='cdal; learnKill; ./launch_shoreside.sh --swim_file=mit_rand.txt' # --ip=<ip-addr>
 
@@ -87,6 +88,7 @@ alias  rvf='runva --observation_radius=100' # --shore=192.168.1.231
 # Rescue vehicle with Neural Network Behavior
 # Run Vehicle Neural Network
 alias  rvn='runva --observation_radius=100 --primarybehavior=NeuralNetwork' # --neural_network_config=<net-csv> --shore=<ip-addr>
+alias krvn='ktm; rvn'
 alias rvn1='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe1.csv' # --shore=<ip-addr>
 alias rvn2='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe2.csv' # --shore=<ip-addr>
 alias rvn3='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe3.csv' # --shore=<ip-addr>
