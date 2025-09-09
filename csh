@@ -89,6 +89,16 @@ alias  rvf='runva --observation_radius=100' # --shore=192.168.1.231
 # Run Vehicle Neural Network
 alias  rvn='runva --observation_radius=100 --primarybehavior=NeuralNetwork' # --neural_network_config=<net-csv> --shore=<ip-addr>
 alias krvn='ktm; rvn'
+
+alias krvn1_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe1.csv' # --shore=<ip-addr>
+alias krvn2_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe2.csv' # --shore=<ip-addr>
+alias krvn3_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe3.csv' # --shore=<ip-addr>
+alias krvn4_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe4.csv' # --shore=<ip-addr>
+alias krvn5_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe5.csv' # --shore=<ip-addr>
+alias krvn6_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe6.csv' # --shore=<ip-addr>
+alias krvn7_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe7.csv' # --shore=<ip-addr>
+alias krvn8_8='krvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_09/neural_network_abe8.csv' # --shore=<ip-addr>
+
 alias rvn1='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe1.csv' # --shore=<ip-addr>
 alias rvn2='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe2.csv' # --shore=<ip-addr>
 alias rvn3='rvn --r_vehicle_sectors=8 --neural_network_config=$HOME/moos-ivp-learn/missions/alpha_learn/net-bv/2025_09_04/neural_network_abe3.csv' # --shore=<ip-addr>
