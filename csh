@@ -81,6 +81,7 @@ alias rss='cdal; learnKill; ./launch_shoreside.sh --swim_file=mit_rand.txt' # --
 
 # Rescue vehicle with baseline FollowCOM
 # Run Vehicle FollowCOM
+alias krvf='ktm; runva --observation_radius=100' # --shore=192.168.1.231
 alias  rvf='runva --observation_radius=100' # --shore=192.168.1.231
 
 # Rescue vehicle with Neural Network Behavior

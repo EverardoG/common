@@ -5,6 +5,9 @@ if [ -f "$HOME/common/csh" ]; then
     source "$HOME/common/csh"
 fi
 
+# Get ip
+alias getip='ifconfig | grep 192.168'
+
 # Source bashrc 
 alias sp='source ~/.bashrc'
 
