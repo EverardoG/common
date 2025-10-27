@@ -1,0 +1,15 @@
+# HPC aliases
+
+# Source common for bash
+if [ -f "$HOME/common/cbash" ]; then
+    source "$HOME/common/cbash"
+fi
+
+# Make the colors work
+export LESS='-R'
+
+# Alias for sourcing influence conda env
+alias si='source /nfs/hpc/share/gonzaeve/miniforge/bin/activate influence'
+
+alias cm='source ~/hpc-share/miniforge/bin/activate; conda activate mariners'
+alias wns='wn sq -u gonzaeve'
