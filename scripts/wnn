@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Wrapper for your squeue display
+
+cmd="sq -u ${USER} -o \"%.18i %.9P %.100j %.8u %.2t %.10M %.6D\""
+watch -n 0.5 $cmd

@@ -5,11 +5,15 @@ if [ -f "$HOME/common/cbash" ]; then
     source "$HOME/common/cbash"
 fi
 
+# Get our path
+export PATH="$HOME/bin:$PATH"
+
 # Make the colors work
 export LESS='-R'
 
 # Alias for sourcing influence conda env
-alias si='source /nfs/hpc/share/gonzaeve/miniforge/bin/activate influence'
+alias  si='source /nfs/hpc/share/gonzaeve/miniforge/bin/activate influence'
 
-alias cm='source ~/hpc-share/miniforge/bin/activate; conda activate mariners'
-alias wns='wn sq -u gonzaeve'
+alias  cm='source ~/hpc-share/miniforge/bin/activate; conda activate mariners'
+alias sqn='sq -u $USER -o "%.18i %.9P %.100j %.8u %.2t %.10M %.6D %R"'
+alias wns='wn squ'
