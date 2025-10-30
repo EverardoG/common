@@ -6,7 +6,7 @@ if [ -f "$HOME/common/cbash" ]; then
 fi
 
 # Get our path
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/common/scripts:$PATH"
 
 # Make the colors work
 export LESS='-R'
